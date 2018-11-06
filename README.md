@@ -9,7 +9,7 @@
 
 This is a quick way to deploy a [gophish](https://github.com/gophish/gophish) installation on your local machine.
 
-The latest version 0.6.0 is running on the official Debian Jessie container. Latest stable image version is 0.6.0.
+The latest version 0.7.1 is running on the official Debian Jessie container. Latest stable image version is 0.7.1.
 
 ## Usage
 
