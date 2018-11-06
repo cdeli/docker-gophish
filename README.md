@@ -16,12 +16,12 @@ The latest version 0.7.1 is running on the official Debian Jessie container. Lat
 #### Quickstart
 
 ```bash
-docker run -ti --name gophish -p 3333:3333 -p 8083:80 matteoggl/gophish
+docker run -ti --name gophish -p 3333:3333 -p 8083:80 cdeli/docker-gophish
 ```
 To run as a daemon:
 
 ```bash
-docker run -d --name gophish -p 3333:3333 -p 8083:80 matteoggl/gophish
+docker run -d --name gophish -p 3333:3333 -p 8083:80 cdeli/docker-gophish
 ```
 
 In your browser, go to ```https://your-docker-machine-ip:3333```

@@ -1,5 +1,9 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Corey Deli
+
+EXPOSE 3333 80
+
+ENV GOPHISH_VERSION 0.7.1
 
 RUN apt-get update && \
 apt-get install --no-install-recommends -y \
@@ -8,13 +12,15 @@ ca-certificates \
 wget && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-WORKDIR /opt/gophish-v0.7.1-linux-64bit
-RUN wget -nv https://github.com/gophish/gophish/releases/download/0.7.1/gophish-v0.7.1-linux-64bit.zip && \
-unzip gophish-v0.7.1-linux-64bit.zip && \
-rm -f gophish-v0.7.1-linux-64bit.zip
+RUN mkdir /opt/gophish && \
+wget -nv https://github.com/gophish/gophish/releases/download/$GOPHISH_VERSION/gophish-v$GOPHISH_VERSION-linux-64bit.zip && \
+unzip gophish-v$GOPHISH_VERSION-linux-64bit.zip -d /opt/gophish && \
+rm -f gophish-v$GOPHISH_VERSION-linux-64bit.zip && \
+chmod +x /opt/gophish/gophish
 
-RUN sed -i "s|127.0.0.1|0.0.0.0|g" config.json && \
-chmod +x gophish
+WORKDIR /opt/gophish/
 
-EXPOSE 3333 80
-ENTRYPOINT ["./gophish"]
+ADD files/config.tmpl /opt/gophish/
+ADD files/entrypoint.sh /opt/gophish/
+
+ENTRYPOINT ["/opt/gophish/entrypoint.sh"]
