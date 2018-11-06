@@ -2,7 +2,7 @@
 
 > A docker image for the Gophish web application
 
-[![Build details](https://img.shields.io/badge/build%20details-success-brightgreen.svg)](https://hub.docker.com/r/matteoggl/gophish/builds) [![Docker Pulls](https://img.shields.io/docker/pulls/matteoggl/gophish.svg)](https://hub.docker.com/r/matteoggl/gophish)
+[![Build details](https://img.shields.io/badge/build%20details-success-brightgreen.svg)](https://hub.docker.com/r/matteoggl/gophish/builds) [![Docker Pulls](https://img.shields.io/docker/pulls/cdeli/gophish.svg)](https://hub.docker.com/r/cdeli/docker-gophish/)
 
 
 ## Description
