@@ -2,7 +2,7 @@
 
 > A docker image for the Gophish web application
 
-[![Build details](https://img.shields.io/badge/build%20details-success-brightgreen.svg)](https://hub.docker.com/r/cdeli/docker-gophish//builds) [![Docker Pulls](https://img.shields.io/docker/pulls/cdeli/gophish.svg)](https://hub.docker.com/r/cdeli/docker-gophish/)
+[![Build details](https://img.shields.io/badge/build%20details-success-brightgreen.svg)](https://hub.docker.com/r/cdeli/docker-gophish/builds) [![Docker Pulls](https://img.shields.io/docker/pulls/cdeli/gophish.svg)](https://hub.docker.com/r/cdeli/docker-gophish)
 
 
 ## Description
@@ -29,7 +29,7 @@ In your browser, go to ```https://your-docker-machine-ip:3333```
 #### Building the image
 
 ```bash
-git clone https://github.com/matteoggl/docker-gophish
+git clone https://github.com/cdeli/docker-gophish.git
 cd docker-gophish
 docker build -t "yourname/gophish:yourtag" .
 ```
