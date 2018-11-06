@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:jessie
 MAINTAINER Corey Deli
 
 EXPOSE 3333 80
