@@ -20,7 +20,4 @@ chmod +x /opt/gophish/gophish
 
 WORKDIR /opt/gophish/
 
-ADD files/config.tmpl /opt/gophish/
-ADD files/entrypoint.sh /opt/gophish/
-
 ENTRYPOINT ["/opt/gophish/entrypoint.sh"]
