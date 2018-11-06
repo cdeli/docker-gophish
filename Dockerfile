@@ -12,9 +12,9 @@ ca-certificates \
 wget && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#RUN mkdir /opt/gophish && \
-wget -nv https://github.com/gophish/gophish/releases/download/v0.7.1/gophish-v0.7.1-linux-64bit.zip && \
-unzip gophish-v0.7.1-linux-64bit.zip && \
+RUN mkdir /opt/gophish && \
+wget -nv https://github.com/gophish/gophish/releases/download/0.7.1/gophish-v0.7.1-linux-64bit.zip && \
+unzip gophish-v0.7.1-linux-64bit.zip -d /opt/gophish && \
 rm -f gophish-v0.7.1-linux-64bit.zip && \
 chmod +x /opt/gophish/gophish
 
