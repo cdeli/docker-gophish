@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Corey Deli
+MAINTAINER Corey Deli <Corey.Deli@outlook.com>
 
 EXPOSE 3333 80
 
@@ -20,4 +20,4 @@ chmod +x /opt/gophish/gophish
 
 WORKDIR /opt/gophish/
 
-ENTRYPOINT ["/opt/gophish/entrypoint.sh"]
+#ENTRYPOINT ["/opt/gophish/entrypoint.sh"]
